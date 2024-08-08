@@ -349,6 +349,7 @@ img {
   margin-bottom: 10px;
   border-radius: 0.5rem;
   font-weight: var(--font-medium);
+  cursor: pointer;
 }
 
 .button:hover {

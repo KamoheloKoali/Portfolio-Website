@@ -177,3 +177,21 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
+
+
+// submit form
+function submitForm() {
+  const name = document.getElementById('name').value;
+  const message = document.getElementById('message').value;
+
+  // Generate a random user ID
+  //const userId = 'user_' + Math.random().toString(36).substr(2, 9);
+
+  // Compose email content
+  const subject = 'Contact';
+  const body = `Name: ${name}\n\n${message}`;
+
+  // Send email using mailto link
+  const mailtoLink = `mailto:kamohelokoali201@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.location.href = mailtoLink;
+}
